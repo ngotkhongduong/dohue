@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f1e8">
+  <meta name="description" content="Trân trọng kính mời bạn đến chung vui trong ngày trọng đại của Đô & Huệ.">
+  <title>Đô & Huệ — Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="invitation-locked">
+  <div class="page-frame"></div>
+  <header class="site-header">
+    <a class="brand" href="#home">Đ <span>&</span> H</a>
+    <button class="menu-toggle" aria-label="Mở menu" aria-expanded="false">☰</button>
+    <nav class="main-nav">
+      <a href="#story">Our story</a>
+      <a href="#events">Wedding day</a>
+      <a href="#gallery">Gallery</a>
+      <a class="nav-rsvp" href="#rsvp">RSVP</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-ornament ornament-top">囍</div>
+      <p class="eyebrow">TRÂN TRỌNG KÍNH MỜI</p>
+      <p class="hero-script">The beginning of forever</p>
+      <h1><span >Thành Đô </span><i>&</i><span> Bích Huệ</span></h1>
+      <p class="hero-subtitle">WE ARE GETTING MARRIED</p>
+      <div class="hero-photo photo-frame"><button class="hero-photo photo-frame invitation-trigger"
+        type="button"
+        data-open-invitation>
+		<img src="images/01.png" alt="Chạm để mở thiệp">
+		</button></div>
+      <p class="hero-date" data-wedding-date>NGÀY ... THÁNG ... NĂM ...</p>
+      <button class="open-invitation" id="openInvitation">
+        <span class="seal">囍</span>
+        <span>Chạm chạm để mở lời mời</span>
+      </button>
+      <div class="scroll-note">SCROLL TO EXPLORE <span>↓</span></div>
+    </section>
+
+    <section class="intro reveal" id="invitation">
+      <p class="eyebrow">SAVE THE DATE</p>
+      <div class="chinese-mark">良缘</div>
+      <h2>Two souls, one beautiful journey.</h2>
+      <p class="intro-copy">Có những cuộc gặp gỡ tưởng chừng ngẫu nhiên, nhưng lại trở thành điều tuyệt vời nhất. Tình cảm chân thành nhất, là cả hai đều tự nguyện lựa chọn đối phương, mỗi ngày.</p>
+      <div class="couple-signature">Thành Đô <span>&</span> Bích Huệ</div>
+      <div class="date-card">
+        <span class="date-label">THE WEDDING CELEBRATION</span>
+        <strong id="weddingDateLong">Ngày ... tháng ... năm ...</strong>
+        <span id="weddingWeekday">...</span>
+      </div>
+    </section>
+
+    <section class="countdown-section reveal">
+      <p class="eyebrow">COUNTING DOWN TO FOREVER</p>
+      <h2>Our special day</h2>
+      <div class="countdown" aria-live="polite">
+        <div><strong id="days">00</strong><span>NGÀY</span></div>
+        <i>:</i><div><strong id="hours">00</strong><span>GIỜ</span></div>
+        <i>:</i><div><strong id="minutes">00</strong><span>PHÚT</span></div>
+        <i>:</i><div><strong id="seconds">00</strong><span>GIÂY</span></div>
+      </div>
+    </section>
+
+    <section class="story-section reveal" id="story">
+      <div class="section-heading">
+        <p class="eyebrow">A LITTLE BIT OF US</p>
+        <h2>Our love story</h2>
+        <p>“I found my home in you.”</p>
+      </div>
+      <div class="story-grid">
+        <div class="story-image photo-frame"><img src="images/02.png" alt="Khoảnh khắc đáng nhớ" onerror="this.parentElement.classList.add('image-empty')"></div>
+        <div class="story-text">
+          <span class="story-number">01 / FOREVER</span>
+          <h3>From hello<br>to always.</h3>
+          <p>Từ những câu chuyện nhỏ mỗi ngày đến những ước mơ lớn cho tương lai, hy vọng ai cũng là No.1 trong lòng của đối phương.</p>
+          <p class="chinese-quote">执子之手，与子偕老</p>
+          <small>Nắm tay nhau, cùng đi đến bạc đầu.</small>
+        </div>
+      </div>
+      <div class="quote-strip">“You are my today and all of my tomorrows.”</div>
+    </section>
+
+    <section class="events-section reveal" id="events">
+      <div class="section-heading">
+        <p class="eyebrow">JOIN US</p>
+        <h2>Wedding day</h2>
+        <p>Rất mong được đón tiếp bạn trong ngày vui của gia đình chúng mình.</p>
+      </div>
+      <div class="event-grid">
+        <article class="event-card">
+          <span class="event-icon">♡</span>
+          <p class="eyebrow">CEREMONY</p>
+          <h3>Lễ thành hôn</h3>
+          <p class="event-time" id="ceremonyTime">10:30 — ...</p>
+          <p class="event-place" id="ceremonyPlace">Tư gia nhà trai / nhà gái</p>
+          <p class="event-address" id="ceremonyAddress">Địa chỉ sẽ được cập nhật</p>
+          <a class="text-link" id="ceremonyMap" href="#" target="_blank" rel="noopener">Xem bản đồ ↗</a>
+        </article>
+        <article class="event-card">
+          <span class="event-icon">✧</span>
+          <p class="eyebrow">WEDDING RECEPTION</p>
+          <h3>Tiệc mừng</h3>
+          <p class="event-time" id="receptionTime">17:30 — ...</p>
+          <p class="event-place" id="receptionPlace">Tên nhà hàng / địa điểm</p>
+          <p class="event-address" id="receptionAddress">Địa chỉ sẽ được cập nhật</p>
+          <a class="text-link" id="receptionMap" href="#" target="_blank" rel="noopener">Xem bản đồ ↗</a>
+        </article>
+      </div>
+      <a class="calendar-link" id="calendarLink" href="#">＋ Lưu ngày cưới vào lịch</a>
+    </section>
+
+    <section class="gallery-section reveal" id="gallery">
+      <div class="section-heading">
+        <p class="eyebrow">THE MOMENTS</p>
+        <h2>Our gallery</h2>
+        <p>Little moments, endless memories.</p>
+      </div>
+      <div class="gallery-grid">
+        <button class="gallery-item tall" data-image="images/03.png" aria-label="Xem ảnh 03"><img src="images/03.png" alt="Ảnh cưới 03" onerror="this.parentElement.classList.add('image-empty')"></button>
+        <button class="gallery-item" data-image="images/04.png" aria-label="Xem ảnh 04"><img src="images/04.png" alt="Ảnh cưới 04" onerror="this.parentElement.classList.add('image-empty')"></button>
+        <button class="gallery-item" data-image="images/05.png" aria-label="Xem ảnh 05"><img src="images/05.png" alt="Ảnh cưới 05" onerror="this.parentElement.classList.add('image-empty')"></button>
+        <button class="gallery-item wide" data-image="images/06.png" aria-label="Xem ảnh 06"><img src="images/06.png" alt="Ảnh cưới 06" onerror="this.parentElement.classList.add('image-empty')"></button>
+        <button class="gallery-item" data-image="images/07.png" aria-label="Xem ảnh 07"><img src="images/07.png" alt="Ảnh cưới 07" onerror="this.parentElement.classList.add('image-empty')"></button>
+        <button class="gallery-item" data-image="images/08.png" aria-label="Xem ảnh 08"><img src="images/08.png" alt="Ảnh cưới 08" onerror="this.parentElement.classList.add('image-empty')"></button>
+      </div>
+    </section>
+
+    <section class="rsvp-section reveal" id="rsvp">
+      <div class="rsvp-inner">
+        <p class="eyebrow">KINDLY REPLY</p>
+        <h2>Will you join us?</h2>
+        <p>Sự hiện diện của bạn là niềm vui và niềm vinh hạnh đối với chúng mình.</p>
+        <form id="rsvpForm">
+          <label for="guestName">Tên của bạn</label>
+          <input id="guestName" name="guestName" type="text" placeholder="Nhập họ và tên" required>
+          <label for="attendance">Bạn sẽ tham dự chứ?</label>
+          <select id="attendance" name="attendance" required>
+            <option value="">Vui lòng chọn</option>
+            <option value="co">Có, mình sẽ đến ♡</option>
+            <option value="khong">Rất tiếc, mình không thể tham dự</option>
+          </select>
+          <label for="guestCount">Số người tham dự</label>
+          <select id="guestCount" name="guestCount">
+            <option value="1">1 người</option><option value="2">2 người</option><option value="3">3 người</option><option value="4">4 người</option>
+			<option value="5">5 người</option><option value="6">6 người</option><option value="7">7 người</option><option value="8">8 người</option>
+          </select>
+          <label for="message">Lời chúc gửi đến cô dâu chú rể</label>
+          <textarea id="message" name="message" rows="3" placeholder="Gửi chúng mình một lời chúc nhé..."></textarea>
+          <button class="submit-button" type="submit">Gửi xác nhận & lời chúc</button>
+          <p class="form-note" id="formMessage">* Một lần nữa, xin chân thành cảm ơn lời chúc của bạn.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="thankyou reveal">
+      <div class="chinese-mark">囍</div>
+      <p class="eyebrow">WITH LOVE & GRATITUDE</p>
+      <h2>Thank you</h2>
+      <p>Cảm ơn bạn đã là một phần trong hành trình yêu thương của chúng mình.</p>
+      <div class="couple-signature">Thành Đô <span>&</span> Bích Huệ</div>
+      <p class="footer-date" data-wedding-date>NGÀY ... THÁNG ... NĂM ...</p>
+    </section>
+  </main>
+
+  <footer>MADE WITH LOVE · ĐÔ & Huệ</footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Đóng ảnh">×</button>
+    <img src="" alt="Ảnh cưới phóng to">
+  </div>
+  <audio id="backgroundMusic" preload="auto"></audio>
+
+	<button id="musicToggle"
+			class="music-toggle"
+			aria-label="Bật hoặc tắt nhạc">
+		♪
+	</button>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
